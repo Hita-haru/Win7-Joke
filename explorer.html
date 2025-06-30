@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>File Explorer</title>
+    <link rel="stylesheet" href="common-window.css">
+    <link rel="stylesheet" href="explorer.css">
+</head>
+<body>
+    <div class="window-frame">
+        <div class="title-bar">
+            <div class="title-bar-icon"></div>
+            <div class="title-bar-text">File Explorer</div>
+            <div class="title-bar-controls">
+                <button class="minimize-btn">_</button>
+                <button class="maximize-restore-btn">&#9723;</button>
+                <button class="close-btn">X</button>
+            </div>
+        </div>
+        <div class="explorer-toolbar">
+            <button id="up-button">Up</button>
+            <input type="text" id="path-input" value="C:\Users\satmo\Documents\開発\program\win7-gemini">
+            <button id="go-button">Go</button>
+        </div>
+        <div class="window-content">
+            <ul id="file-list"></ul>
+        </div>
+    </div>
+    <script src="explorer.js"></script>
+</body>
+</html>

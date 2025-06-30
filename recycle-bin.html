@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recycle Bin</title>
+    <link rel="stylesheet" href="common-window.css">
+    <link rel="stylesheet" href="recycle-bin.css">
+</head>
+<body>
+    <div class="window-frame">
+        <div class="title-bar">
+            <div class="title-bar-icon"></div>
+            <div class="title-bar-text">Recycle Bin</div>
+            <div class="title-bar-controls">
+                <button class="minimize-btn">_</button>
+                <button class="maximize-restore-btn">&#9723;</button>
+                <button class="close-btn">X</button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <button id="file-menu" data-target="file-dropdown">File</button>
+            <div id="file-dropdown" class="dropdown-content">
+                <a href="#" id="empty-recycle-bin">Empty Recycle Bin</a>
+                <hr>
+                <a href="#" id="exit-app">Exit</a>
+            </div>
+        </div>
+        <div class="window-content">
+            <ul id="recycle-bin-list"></ul>
+        </div>
+    </div>
+    <script src="recycle-bin.js"></script>
+</body>
+</html>

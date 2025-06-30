@@ -1,0 +1,206 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#desktop {
+  width: 100%;
+  height: 100%;
+  background: url('win7wall.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+}
+
+#taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3); /* Darker, more transparent */
+  backdrop-filter: blur(25px); /* Stronger blur */
+  -webkit-backdrop-filter: blur(25px); /* For WebKit browsers */
+  border-top: 1px solid rgba(255, 255, 255, 0.4); /* Slightly less prominent border */
+  box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.9); /* Stronger and larger shadow */
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+#start-button {
+    width: 40px;
+    height: 40px;
+    background: url('win7logo.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#start-button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Less visible hover */
+}
+
+#start-menu {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 380px;
+  height: 500px;
+  background: linear-gradient(to right, rgba(0, 80, 160, 0.4) 0%, rgba(0, 120, 215, 0.4) 100%); /* Darker, more transparent blue gradient */
+  backdrop-filter: blur(25px); /* Stronger blur */
+  -webkit-backdrop-filter: blur(25px); /* For WebKit browsers */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly less prominent border */
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95); /* Stronger and larger shadow */
+  display: flex;
+  z-index: 999;
+  overflow: hidden;
+}
+
+#start-menu.hidden {
+  display: none;
+}
+
+.start-menu-main {
+  width: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darker, more transparent black */
+  border-right: 1px solid rgba(255, 255, 255, 0.4); /* Slightly less prominent border */
+  padding: 10px 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.start-menu-sidebar {
+  width: 130px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Darker, more transparent black */
+  padding: 10px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.start-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Stronger text shadow */
+}
+
+.start-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Less visible hover */
+}
+
+.start-menu-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.start-menu-item span {
+  font-size: 14px;
+}
+
+.start-menu-sidebar .start-menu-item {
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.start-menu-sidebar .start-menu-item img {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.start-menu-sidebar .start-menu-item:last-child {
+  margin-top: auto;
+}
+
+
+.desktop-icon {
+  width: 80px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.desktop-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.desktop-icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.desktop-icon span {
+  font-size: 12px;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+#taskbar-apps {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.taskbar-app-item {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 5px;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.taskbar-app-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.taskbar-app-item.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.taskbar-app-item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.taskbar-app-item span {
+  color: white;
+  font-size: 13px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}

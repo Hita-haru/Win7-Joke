@@ -1,0 +1,22 @@
+#recycle-bin-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#recycle-bin-list li {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#recycle-bin-list li:hover {
+  background-color: #e0e0e0;
+}
+
+#recycle-bin-list li::before {
+  content: '🗑️'; /* Trash icon */
+  margin-right: 5px;
+}

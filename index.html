@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Windows 7</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="desktop">
+      <div class="desktop-icon" id="icon-computer">
+        <img src="computer.png" alt="Computer">
+        <span>Computer</span>
+      </div>
+      <div class="desktop-icon" id="icon-recycle-bin">
+        <img src="recycle.ico" alt="Recycle Bin">
+        <span>Recycle Bin</span>
+      </div>
+    </div>
+    <div id="taskbar">
+      <div id="start-button"></div>
+      <div id="taskbar-apps"></div>
+    </div>
+
+    <div id="start-menu" class="hidden">
+      <div class="start-menu-main">
+          <div class="start-menu-item" data-app="Notepad">
+            <img src="notepad.ico" alt="Notepad Icon">
+            <span>Notepad</span>
+          </div>
+          <div class="start-menu-item" data-app="Paint">
+            <img src="paint.ico" alt="Paint Icon">
+            <span>Paint</span>
+          </div>
+          <div class="start-menu-item" data-app="Web Browser">
+            <img src="browser.ico" alt="Web Browser Icon">
+            <span>Web Browser</span>
+          </div>
+          <div class="start-menu-item" data-app="Computer">
+            <img src="computer.png" alt="Computer Icon">
+            <span>Computer</span>
+          </div>
+          <div class="start-menu-item" data-app="Minesweeper">
+            <img src="minesweeper.ico" alt="Minesweeper Icon">
+            <span>Minesweeper</span>
+          </div>
+          <!-- Program list will go here -->
+        </div>
+      <div class="start-menu-sidebar">
+          <!-- System folders and shutdown button will go here -->
+          <div class="start-menu-item" id="shutdown-button">
+            <img src="shutdown.ico" alt="Shutdown Icon">
+            <span>Shut down</span>
+          </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

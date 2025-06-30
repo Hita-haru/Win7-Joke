@@ -1,0 +1,56 @@
+.explorer-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #ccc;
+}
+
+.explorer-toolbar button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.explorer-toolbar input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+#file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#file-list li {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#file-list li:hover {
+  background-color: #e0e0e0;
+}
+
+#file-list li.directory::before {
+  content: '📁'; /* Folder icon */
+  margin-right: 5px;
+}
+
+#file-list li.file::before {
+  content: '📄'; /* File icon */
+  margin-right: 5px;
+}
+
+.window-frame .window-content {
+  background-color: white;
+  flex-grow: 1;
+  overflow-y: auto;
+}

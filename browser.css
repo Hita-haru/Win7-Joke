@@ -1,0 +1,35 @@
+.browser-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #ccc;
+}
+
+.browser-toolbar button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.browser-toolbar input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+/* Ensure webview takes remaining height */
+.window-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Remove padding to allow webview to fill */
+}
+
+#browser-webview {
+  width: 100%;
+  flex-grow: 1; /* Allow webview to take remaining height */
+  border: none;
+}

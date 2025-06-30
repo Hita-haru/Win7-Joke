@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Browser</title>
+    <link rel="stylesheet" href="common-window.css">
+    <link rel="stylesheet" href="browser.css">
+</head>
+<body>
+    <div class="window-frame">
+        <div class="title-bar">
+            <div class="title-bar-icon"></div>
+            <div class="title-bar-text">Web Browser</div>
+            <div class="title-bar-controls">
+                <button class="minimize-btn">_</button>
+                <button class="maximize-restore-btn">&#9723;</button>
+                <button class="close-btn">X</button>
+            </div>
+        </div>
+        <div class="browser-toolbar">
+            <button id="back-button">&lt;</button>
+            <button id="forward-button">&gt;</button>
+            <input type="text" id="url-input" value="https://www.google.com/">
+            <button id="go-button">Go</button>
+        </div>
+        <webview id="browser-webview" src="https://www.google.com/" style="width:100%; height:100%;"></webview>
+    </div>
+    <script src="browser.js"></script>
+</body>
+</html>

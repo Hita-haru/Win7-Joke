@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="common-window.css">
+    <link rel="stylesheet" href="notepad.css">
+</head>
+<body>
+    <div class="window-frame">
+        <div class="title-bar">
+            <div class="title-bar-icon"></div>
+            <div class="title-bar-text">Notepad</div>
+            <div class="title-bar-controls">
+                <button class="minimize-btn">_</button>
+                <button class="maximize-restore-btn">&#9723;</button>
+                <button class="close-btn">X</button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <button id="file-menu" data-target="file-dropdown">File</button>
+            <button id="edit-menu" data-target="edit-dropdown">Edit</button>
+            <button id="help-menu" data-target="help-dropdown">Help</button>
+            <div id="file-dropdown" class="dropdown-content">
+                <a href="#" id="new-file">New</a>
+                <a href="#" id="open-file">Open...</a>
+                <a href="#" id="save-file">Save</a>
+                <a href="#" id="save-as-file">Save As...</a>
+                <hr>
+                <a href="#" id="exit-app">Exit</a>
+            </div>
+            <div id="edit-dropdown" class="dropdown-content">
+                <!-- Edit menu items -->
+            </div>
+            <div id="help-dropdown" class="dropdown-content">
+                <!-- Help menu items -->
+            </div>
+        </div>
+        <div class="window-content">
+            <textarea id="notepad-textarea"></textarea>
+        </div>
+    </div>
+    <script src="notepad.js"></script>
+</body>
+</html>
